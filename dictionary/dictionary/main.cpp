@@ -28,6 +28,10 @@ int main(int argc, const char * argv[]) {
         std::string xLineBuf;
         while ( std::getline(xInputStream, xLineBuf) )
         {
+            if ( xLineBuf.empty() )
+            {
+                continue;
+            }
             std::cout << xLineBuf << std::endl;
         }
     }
